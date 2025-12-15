@@ -7,11 +7,7 @@ import './styles/table.css'
 export default function Table ({ search = "", selected = "" }) {
 
     const { products } = useDB();
-    const { list, loading, error, fetchProducts } = products;
-
-    useEffect(() => {
-        fetchProducts();
-    }, [fetchProducts]);
+    const { list, loading, error } = products;
 
     const filteredList = useMemo(() => {
         return list.filter(item => {

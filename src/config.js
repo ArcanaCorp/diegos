@@ -18,7 +18,8 @@ const ALMACEN_MENU = [
     { link: '/almacen', txt: 'Stock', ico: <IconPackages/>, mobile: true },
     { link: '/ingresos', txt: 'Ingresos', ico: <IconArrowDown/>, mobile: true },
     { link: '/salidas', txt: 'Salidas', ico: <IconArrowUp/>, mobile: true },
-    { link: '/mermas', txt: 'Mermas', ico: <IconAlertOctagon/>, mobile: true }
+    { link: '/mermas', txt: 'Mermas', ico: <IconAlertOctagon/>, mobile: true },
+    { link: '/config', txt: 'Configuración', ico: <IconSettings/>, mobile: false },
 ];
 
 const TIENDA_MENU = [
@@ -27,6 +28,7 @@ const TIENDA_MENU = [
     { link: '/productos', txt: 'Productos', ico: <IconPackageExport/>, mobile: true },
     { link: '/pedidos', txt: 'Pedidos a almacén', ico: <IconSend/>, mobile: true },
     { link: '/caja', txt: 'Caja del día', ico: <IconCashRegister/>, mobile: true },
+    { link: '/config', txt: 'Configuración', ico: <IconSettings/>, mobile: false },
 ];
 
 export const MENUS = {
@@ -34,3 +36,5 @@ export const MENUS = {
     ALMACEN: ALMACEN_MENU,
     TIENDA: TIENDA_MENU,
 };
+
+export const METHOD_PAYMENT = ['YAPE', 'TRANSFERENCIA', 'EFECTIVO', 'PLIN']

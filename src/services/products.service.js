@@ -1,11 +1,20 @@
 import { STATUS_CODE } from "@/helpers/status_code"
 import { REACT_APP_API } from "@/config"
+import Cookies from 'js-cookie'
 
 export const serviceGetProductAll = async () => {
 
     try {
         
-        const response = await fetch(`${REACT_APP_API}/products/all`);
+        const token = Cookies.get('diegos_token')
+        if (!token) return;
+        const response = await fetch(`${REACT_APP_API}/products/all`, {
+            method: 'GET',
+            headers: {
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
         const data = await response.json();
         if (!response.ok) throw new Error(data.message || response.statusText);
             return data;

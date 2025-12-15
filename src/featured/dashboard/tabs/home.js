@@ -1,3 +1,4 @@
+import Panel from "@/components/Alerts/Panel";
 import Alert from "../components/alerts/Alert";
 import ChartsCard from "../components/cards/charts";
 import Kpis from "../components/cards/kpis";
@@ -114,16 +115,7 @@ export default function HomePage () {
 
                 </div>
 
-                <div className="--row-B">
-                    <div className="__alerts">
-                        <h3 className="--title">Alertas</h3>
-                        <ul className="--list">
-                            {data.alertasStock.map((alr, i) => (
-                                <Alert key={i} data={alr} />
-                            ))}
-                        </ul>
-                    </div>
-                </div>
+                <Panel/>
                 
             </div>
 

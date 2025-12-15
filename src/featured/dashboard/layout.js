@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Toaster } from "sonner";
 import { MENUS } from "@/config";
 import { useAuth } from "@/context/AuthContext";
+import { playNotificationSound } from "@/utils/sound";
 
 import { setupSockets } from "@/socket";
 
@@ -23,9 +24,23 @@ export default function DashboardLayout () {
     const toogleMenu = () => setMenu(!menu)
 
     useEffect(() => {
+        const enableSound = () => {
+            playNotificationSound(); // desbloquea autoplay
+            window.removeEventListener("click", enableSound);
+        };
+
+        window.addEventListener("click", enableSound);
+
+        return () => {
+            window.removeEventListener("click", enableSound);
+        };
+    }, []);
+
+
+    useEffect(() => {
         if (!user) return; // seguridad extra
 
-        setupSockets(); // se conecta UNA sola vez mientras este layout exista
+        setupSockets(user); // se conecta UNA sola vez mientras este layout exista
     }, [user]);
 
     return (

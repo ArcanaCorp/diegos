@@ -6,8 +6,12 @@ import AuthLayout from "@/featured/auth/layout";
 import LoginPage from "@/featured/auth/page";
 import HomePage from "@/featured/dashboard/tabs/home";
 import UsersPage from "@/featured/dashboard/tabs/users";
-import VentasPage from "../featured/dashboard/tabs/ventas/page";
-import ProductosPage from "../featured/dashboard/tabs/productos/page";
+import VentasPage from "@/featured/dashboard/tabs/ventas/page";
+import ProductosPage from "@/featured/dashboard/tabs/productos/page";
+import POSPage from "@/featured/dashboard/tabs/pos/page";
+import InsumosPage from "@/featured/dashboard/tabs/insumos/page";
+import ReportesPage from "@/featured/dashboard/tabs/reportes/page";
+import ConfigPage from "@/featured/dashboard/tabs/config/page";
 
 export const routers = createBrowserRouter([
     {
@@ -30,17 +34,24 @@ export const routers = createBrowserRouter([
                         element: <ProductosPage/>
                     },
                     {
-                        path: '/insumos'
+                        path: '/insumos',
+                        element: <InsumosPage/>
                     },
                     {
                         path: '/usuarios',
                         element: <UsersPage/>
                     },
                     {
-                        path: '/reportes'
+                        path: '/reportes',
+                        element: <ReportesPage/>
                     },
                     {
-                        path: '/config'
+                        path: '/config',
+                        element: <ConfigPage/>
+                    },
+                    {
+                        path: '/pos',
+                        element: <POSPage/>
                     }
                 ]
             }

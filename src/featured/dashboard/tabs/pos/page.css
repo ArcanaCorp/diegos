@@ -1,0 +1,73 @@
+.--form-sale {
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background-color: var(--color-white);
+}
+
+.--form-sale .--form-sale-group {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.--form-sale .--form-sale-group label {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-sm);
+}
+
+.--form-sale .--form-sale-group .--form-sale-control {
+    width: 100%;
+}
+
+.--form-sale .--form-sale-group .--form-sale-control.flex {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.--form-sale .--form-sale-group .--form-sale-control .--form-sale-flex {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.--form-sale .--form-sale-group .--form-sale-control .--form-sale-flex select,
+.--form-sale .--form-sale-group .--form-sale-control .--form-sale-flex input {
+    width: 100%;
+    height: 50px;
+    padding: 0 1rem;
+    border-radius: var(--radius-md);
+    background-color: var(--color-gray-100);
+}
+
+.--form-sale .--form-sale-group .--form-sale-control .--form-btn-add {
+    display: flex;
+    gap: .8rem;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    padding: 0rem 1rem;
+    justify-content: center;
+    color: var(--color-white);
+    border-radius: var(--radius-md);
+    background-color: var(--color-primary);
+}
+
+.--form-sale .--form-sale-group .--form-sale-control select {
+    width: 100%;
+    height: 50px;
+    padding: 0 1rem;
+    border-radius: var(--radius-md);
+    background-color: var(--color-gray-100);
+}
+
+.--form-sale .--form-sale-group .--form-sale-control textarea {
+    width: 100%;
+    padding: 1rem;
+    resize: none;
+    min-height: 50px;
+    max-height: 200px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-gray-100);
+}

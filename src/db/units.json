@@ -1,0 +1,37 @@
+{
+    "unidades": {
+        "peso": [
+            { "codigo": "KG", "nombre": "Kilogramo", "simbolo": "kg" },
+            { "codigo": "G", "nombre": "Gramo", "simbolo": "g" },
+            { "codigo": "MG", "nombre": "Miligramo", "simbolo": "mg" }
+        ],
+        "volumen": [
+            { "codigo": "L", "nombre": "Litro", "simbolo": "l" },
+            { "codigo": "ML", "nombre": "Mililitro", "simbolo": "ml" }
+        ],
+        "cantidad": [
+            { "codigo": "UND", "nombre": "Unidad", "simbolo": "und" },
+            { "codigo": "DOC", "nombre": "Docena", "simbolo": "doc" },
+            { "codigo": "PAR", "nombre": "Par", "simbolo": "par" }
+        ],
+        "panaderia": [
+            { "codigo": "POR", "nombre": "Porción", "simbolo": "por" },
+            { "codigo": "BAN", "nombre": "Bandeja", "simbolo": "ban" },
+            { "codigo": "MOL", "nombre": "Molde", "simbolo": "mol" },
+            { "codigo": "ROL", "nombre": "Rollo", "simbolo": "rol" },
+            { "codigo": "BAR", "nombre": "Barra", "simbolo": "bar" },
+            { "codigo": "PAN", "nombre": "Pan", "simbolo": "pan" }
+        ],
+        "empaque": [
+            { "codigo": "PK", "nombre": "Paquete", "simbolo": "pkg" },
+            { "codigo": "CJ", "nombre": "Caja", "simbolo": "cj" },
+            { "codigo": "BOL", "nombre": "Bolsa", "simbolo": "bol" },
+            { "codigo": "SAC", "nombre": "Saco", "simbolo": "sac" }
+        ],
+        "extras": [
+            { "codigo": "REC", "nombre": "Receta", "simbolo": "rec" },
+            { "codigo": "LOT", "nombre": "Lote", "simbolo": "lot" },
+            { "codigo": "SERV", "nombre": "Servicio", "simbolo": "serv" }
+        ]
+    }
+}

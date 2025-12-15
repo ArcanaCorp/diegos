@@ -5,6 +5,7 @@ import { IconEye, IconEyeOff, IconUserCircle } from '@tabler/icons-react'
 import { useAuth } from "@/context/AuthContext";
 import { login } from "@/services/account.service";
 import './styles/page.css'
+import { replace, useNavigate } from "react-router-dom";
 export default function LoginPage () {
 
     const { getAccount } = useAuth();
@@ -14,22 +15,20 @@ export default function LoginPage () {
     const [ loading, setLoading ] = useState(false)
 
     const handleLogin = async () => {
-        if (!usr || !pwd) {
-            return toast.warning('Alerta', { description: 'Ingresa datos válidos antes de ingresar.' })
-        }
-
-        try {
-            setLoading(true)
-            const data = await login(usr, pwd);
-            if (!data.ok) return toast.warning('Alerta', { description: data.message })
-                Cookies.set('diegos_token', data.data, { expires: 0.5 })
-                await getAccount(data.data)
-                toast.success('Éxito', { description: data.message })
-        } catch (error) {
-            toast.error('Error', { description: error.message })
-        } finally {
-            setLoading(false);
-        }
+        if (loading) return;
+        if (!usr.trim() || !pwd.trim()) return toast.warning('Alerta', { description: 'Ingresa datos válidos antes de ingresar.' });
+            try {
+                setLoading(true)
+                const data = await login(usr, pwd);
+                if (!data.ok) return toast.warning('Alerta', { description: data.message })
+                    Cookies.set('diegos_token', data.data, { expires: 0.5, sameSite: true })
+                    await getAccount(data.data)
+                    toast.success('Éxito', { description: data.message })
+            } catch (error) {
+                toast.error('Error', { description: error.message })
+            } finally {
+                setLoading(false);
+            }
     }
 
     return (
