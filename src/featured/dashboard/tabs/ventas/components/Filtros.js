@@ -30,17 +30,6 @@ export default function Filtros ({ filter, setFilter, ventas, onClear }) {
                     </select>
                 </div>
             </li>
-            <li className='--filter --filter-type'>
-                <label className='--filter-label'>Productos</label>
-                <div className='--filter-control'>
-                    <select value={filter.product} defaultValue={''} onChange={(e) => setFilter(prev => ({ ...prev, product: e.target.value }))}>
-                        <option value={''} selected hidden>Producto</option>
-                        {ventas.map((p) => (
-                            <option key={p.id} value={p.producto}>{p.producto}</option>
-                        ))}
-                    </select>
-                </div>
-            </li>
             {(filter.text || filter.dateFrom || filter.dateTo || filter.store || filter.product) && (
                 <button className='--filter-delete' onClick={onClear}>Borrar filtros</button>
             )}

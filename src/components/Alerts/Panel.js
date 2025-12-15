@@ -9,7 +9,11 @@ export default function Panel () {
             <div className="--row-B">
                 <div className="__alerts">
                     <h3 className="--title">Notificaciones</h3>
-                    <ul className="--list"></ul>
+                    <ul className="--list">
+                        <Alert/>
+                        <Alert/>
+                        <Alert/>
+                    </ul>
                 </div>
             </div>
 

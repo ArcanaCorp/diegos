@@ -1,5 +1,4 @@
 import Panel from "@/components/Alerts/Panel";
-import Alert from "../components/alerts/Alert";
 import ChartsCard from "../components/cards/charts";
 import Kpis from "../components/cards/kpis";
 import './styles/home.css'

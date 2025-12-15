@@ -4,10 +4,10 @@ export default function Alert ({ data }) {
 
         <li className={`--alert`}>
             <div className='--alert-col'>
-                <span className="--alert-sub"></span>
-                <h3 className="--alert-tit"></h3>
+                <span className="--alert-sub">Categoria</span>
+                <h3 className="--alert-tit">Titulo de la notificación</h3>
             </div>
-            <span className={`--alert-badge`}></span>
+            <span className={`--alert-badge`}>Si</span>
         </li>
 
     )

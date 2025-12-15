@@ -5,7 +5,6 @@ import { IconEye, IconEyeOff, IconUserCircle } from '@tabler/icons-react'
 import { useAuth } from "@/context/AuthContext";
 import { login } from "@/services/account.service";
 import './styles/page.css'
-import { replace, useNavigate } from "react-router-dom";
 export default function LoginPage () {
 
     const { getAccount } = useAuth();

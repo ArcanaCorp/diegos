@@ -1,5 +1,5 @@
 import { useDB } from "@/context/DBContext"
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import Row from "./Row";
 
 import './styles/table.css'
