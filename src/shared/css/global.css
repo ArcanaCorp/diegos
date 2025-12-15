@@ -1,0 +1,147 @@
+:root {
+    /* -------------------------------------- */
+    /* PALETA BASE                            */
+    /* -------------------------------------- */
+    --color-white: #FFFFFF;
+    --color-dark: #181818;
+    --color-gray: #888888;
+    --color-secondary: #EEEEEE;
+    --color-bg: #F2F0F5;
+
+    /* Tonos derivados (más útiles para UI real) */
+    --color-dark-100: #0F0F0F;
+    --color-dark-200: #1E1E1E;
+    --color-dark-300: #2A2A2A;
+
+    --color-gray-100: #F7F7F7;
+    --color-gray-200: #E1E1E1;
+    --color-gray-300: #C4C4C4;
+    --color-gray-400: #A0A0A0;
+    --color-gray-500: #888888;
+    --color-gray-600: #6A6A6A;
+    --color-gray-700: #4A4A4A;
+
+    --color-primary: #4B49E8;
+    --color-primary-light: #6362FF;
+    --color-primary-dark: #2F2DBF;
+
+    --color-success: #28C76F;
+    --color-warning: #FF9F43;
+    --color-danger: #EA5455;
+
+    /* -------------------------------------- */
+    /* TIPOGRAFÍA                              */
+    /* -------------------------------------- */
+    --font-family: "Stack Sans Text", sans-serif;
+
+
+    /* Escala fluida: para responsive elegante */
+    --font-size-xs: clamp(0.7rem, 0.65rem + 0.2vw, 0.8rem);
+    --font-size-sm: clamp(0.8rem, 0.75rem + 0.2vw, 0.9rem);
+    --font-size-md: clamp(0.9rem, 0.85rem + 0.2vw, 1rem);
+    --font-size-rg: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+    --font-size-lg: clamp(1.2rem, 1.1rem + 0.3vw, 1.4rem);
+    --font-size-xl: clamp(1.5rem, 1.3rem + 0.5vw, 1.9rem);
+    --font-size-xxl: clamp(2rem, 1.6rem + 1vw, 3rem);
+
+    /* Weight estándar corporativo */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* -------------------------------------- */
+    /* ESPACIADO GLOBAL                        */
+    /* -------------------------------------- */
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-sm: 12px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-xxl: 48px;
+
+    /* -------------------------------------- */
+    /* RADIOS                                  */
+    /* -------------------------------------- */
+    --radius-sm: 5px;
+    --radius-md: 10px;
+    --radius-lg: 15px;
+    --radius-xl: 20px;
+    --radius-pill: 999px;
+
+    /* -------------------------------------- */
+    /* SOMBRAS                                 */
+    /* -------------------------------------- */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 3px 6px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 20px rgba(0,0,0,0.12);
+
+    /* -------------------------------------- */
+    /* TRANSICIONES                            */
+    /* -------------------------------------- */
+    --transition-fast: .15s ease;
+    --transition-normal: .25s ease;
+    --transition-slow: .4s ease;
+
+    /* -------------------------------------- */
+    /* LAYOUT                                  */
+    /* -------------------------------------- */
+    --max-width: 1200px;
+    --container-padding: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-bg);
+}
+
+.__page {
+    width: inherit;
+    height: inherit;
+    overflow: inherit;
+}
+
+input, select, textarea {
+    outline: none;
+    font-family: var(--font-family);
+}
+
+ul, li, ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tabler-icon {
+    stroke-width: 1.2;
+}

@@ -1,0 +1,19 @@
+.__wrap_actions {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.__wrap_content {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 1024px) {
+    
+    .__wrap_content {
+        flex-direction: row;
+    }
+
+}

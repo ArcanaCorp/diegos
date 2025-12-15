@@ -1,0 +1,23 @@
+.__table--skeleton {
+    width: 100%;
+    height: 150px; /* Ajusta según tu tabla */
+    border-radius: 8px;
+    background: linear-gradient(
+        90deg,
+        #e6e6e6 0%,
+        #f2f2f2 50%,
+        #e6e6e6 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.4s ease-in-out infinite;
+}
+
+/* Animación */
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}

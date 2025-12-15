@@ -1,0 +1,56 @@
+.__form_created_user {
+    width: 100%;
+    padding: 1rem;
+    min-width: 100%;
+    border-radius: var(--radius-md);
+    background-color: var(--color-white);
+}
+
+.__form_created_user .__title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.__form_created_user .__title button {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    place-items: center;
+    background: none;
+}
+
+.__form_created_user .__form_group {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.__form_created_user .__form_group label {
+    display: inline-block;
+    margin-bottom: .4rem;
+    color: var(--color-gray);
+    font-size: var(--font-size-xs);
+}
+
+.__form_created_user .__form_group .__form_control {
+    position: relative;
+    width: 100%;
+}
+
+.__form_created_user .__form_group .__form_control .__form_ico {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    place-items: center;
+}
+
+
+@media (min-width: 1024px) {
+    .__form_created_user {
+        width: 500px;
+        min-width: 500px;
+    }
+}

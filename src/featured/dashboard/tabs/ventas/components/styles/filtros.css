@@ -1,0 +1,35 @@
+.--filters {
+    display: flex;
+    gap: .4rem;
+    overflow-y: auto;
+}
+
+.--filters::-webkit-scrollbar {
+    display: none;
+}
+
+.--filters .--filter .--filter-label {
+    color: var(--color-gray);
+    font-size: var(--font-size-xs);
+}
+
+.--filters .--filter .--filter-control {
+    height: 40px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-gray-100);
+}
+
+.--filters .--filter .--filter-control input,
+.--filters .--filter .--filter-control select {
+    height: inherit;
+    padding: 0 1rem;
+    background: inherit;
+    border-radius: inherit;
+}
+
+.--filters .--filter-delete {
+    padding: 0 1rem;
+    color: var(--color-white);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-dark);
+}

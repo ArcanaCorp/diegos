@@ -1,0 +1,34 @@
+.__tabs {
+    width: 100%;
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.__tabs .__tab {
+    width: 100%;
+    height: inherit;
+}
+
+.__tabs .__tab .__tab_link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: none;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.__tabs .__tab .__tab_link .__tab_ico .tabler-icon {
+    stroke: var(--color-gray);
+}
+
+.__tabs .__tab--active .__tab_link .__tab_ico .tabler-icon {
+    stroke: var(--color-dark);
+}
+
+.__tabs .__tab .__tab_link .__tab_txt {
+    display: none;
+}
