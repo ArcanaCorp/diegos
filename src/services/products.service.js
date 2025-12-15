@@ -27,15 +27,18 @@ export const serviceGetProductAll = async () => {
 
 export const serviceUpdateProduct = async (id, field, value) => {
     try {
+        const token = Cookies.get('diegos_token')
         const response = await fetch(`${REACT_APP_API}/products/${id}`, {
             method: 'PUT',
             headers: {
-                'Content-type': 'application/json'
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify({field, value})
         });
         const data = await response.json();
         if (!response.ok) throw new Error(data.message || response.statusText);
+            console.log(data);
             return data;
     } catch (error) {
         return {ok: false, message: `Error: ${error.message}`, error: error, status: STATUS_CODE.SERVER_ERROR, code: 500}
@@ -44,10 +47,12 @@ export const serviceUpdateProduct = async (id, field, value) => {
 
 export const serviceDeleteProduct = async (id) => {
     try {
+        const token = Cookies.get('diegos_token')
         const response = await fetch(`${REACT_APP_API}/products/${id}`, {
             method: 'DELETE',
             headers: {
-                'Content-type': 'application/json'
+                'Content-type': 'application/json',
+                'Authorization': `Bearer ${token}`
             }
         })
         const data = await response.json();
