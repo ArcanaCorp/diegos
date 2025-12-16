@@ -1,0 +1,99 @@
+.--sales-table {
+    width: 100%;
+    overflow-y: auto;
+    border-radius: var(--radius-md);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-secondary);
+}
+
+.--sales-table .--sales-table-head {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: calc(calc(150px * 5)  + 60px);
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.--sales-table .--sales-table-head .--col {
+    display: grid;
+    width: 100%;
+    min-width: 150px;
+    height: inherit;
+    place-items: center;
+    font-size: var(--font-size-xs);
+    border-right: 1px solid var(--color-secondary);
+}
+
+.--sales-table .--sales-table-head .--col-1 {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+}
+
+.--sales-table .--sales-table-head:last-child {
+    border-right: 0;
+}
+
+.--sales-table .--sales-table-body {
+    width: 100%;
+}
+
+.--sales-table .--sales-table-body .--row {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: calc(calc(150px * 5)  + 60px);
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.--sales-table .--sales-table-body .--row .--col {
+    display: flex;
+    width: 100%;
+    min-width: 150px;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    border-right: 1px solid var(--color-secondary);
+}
+
+.--sales-table .--sales-table-body .--row .--col-1 {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    place-items: center;
+}
+
+.--sales-table .--sales-table-body .--row:last-child {
+    border: 0;
+}
+
+.--sales-table .--sales-table-body .--row .--col-6 button {
+    position: relative;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    margin-right: .5rem;
+    place-items: center;
+    border-radius: var(--radius-md);
+}
+
+.--sales-table .--sales-table-body .--row .--col-6 button .--tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    text-wrap: nowrap;
+    padding: .2rem .4rem;
+    color: var(--color-white);
+    border-radius: var(--radius-sm);
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.--sales-table .--sales-table-body .--row .--col-6 button:hover .--tooltip {
+    display: inline-block;
+}

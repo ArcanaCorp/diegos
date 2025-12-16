@@ -1,0 +1,91 @@
+.--ticket {
+    width: 120mm;
+    border: 1px solid #000;
+}
+
+.--ticket .--ticket-content {
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.--ticket .--ticket-content .--ticket-row {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.--ticket .--ticket-content .--ticket-row .--logo {
+    width: 60%;
+    margin: auto;
+}
+
+.--ticket .--ticket-content .--ticket-row-2 {
+    padding: .8rem;
+    color: var(--color-white);
+    background-color: var(--color-dark);
+}
+
+.--ticket .--ticket-content .--ticket-row-3 {
+    padding: 1rem 0;
+}
+
+.--ticket .--ticket-content .--ticket-row-3 h2 {
+    margin-bottom: .8rem;
+}
+
+.--ticket .--ticket-content .--ticket-row-3 p {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.--ticket .--ticket-content .--ticket-row-4 .--p-flx {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.--ticket .--ticket-content .--ticket-row-4 p {
+    display: flex;
+    padding: .5rem 0;
+}
+
+.--ticket .--ticket-content .--ticket-row-5 {
+    border-bottom: 1px solid var(--color-dark);
+}
+
+.--ticket .--ticket-content .--ticket-row-5 .--table-head {
+    width: 100%;
+    display: flex;
+    padding: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-dark);
+    border-bottom: 1px solid var(--color-dark);
+}
+
+.--ticket .--ticket-content .--ticket-row-5 .--table-body {
+    width: 100%;
+    display: flex;
+    padding: .5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.--ticket .--ticket-content .--ticket-row-6 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.--ticket .--ticket-content .--ticket-row-6 .--p-value {
+    font-size: 1.5rem;
+}
+
+.--ticket .--ticket-content .--ticket-row-7 {
+    text-align: center;
+    color: var(--color-gray);
+    font-size: var(--font-size-sm);
+}

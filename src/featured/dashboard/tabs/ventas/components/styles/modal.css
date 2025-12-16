@@ -1,0 +1,125 @@
+.--overlay {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: grid;
+    height: 100dvh;
+    place-items: center;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.--overlay.active {
+    top: 0;
+}
+
+.--overlay .--modal {
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background-color: var(--color-white);
+}
+
+.--overlay .--modal .--modal-head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.--overlay .--modal .--modal-head button {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border-radius: var(--radius-md);
+}
+
+.--overlay .--modal .--modal-body {
+    padding: 1rem 0;
+}
+
+.--overlay .--modal .--modal-body .--lst-details {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+    margin-bottom: .5rem;
+    flex-direction: column;
+}
+
+.--overlay .--modal .--modal-body .--lst-details li {
+    display: flex;
+    gap: .5rem;
+}
+
+.--overlay .--modal .--modal-body .--table {
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-secondary);
+}
+
+.--overlay .--modal .--modal-body .--table .--table-head {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.--overlay .--modal .--modal-body .--table .--table-head li {
+    display: grid;
+    width: 100%;
+    height: inherit;
+    place-items: center;
+    text-align: center;
+    font-size: var(--font-size-sm);
+    background-color: var(--color-gray-100);
+}
+
+.--overlay .--modal .--modal-body .--table .--table-head .--span-1 {
+    width: 50px;
+    min-width: 50px;
+}
+
+.--overlay .--modal .--modal-body .--table .--table-body li {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--color-gray-100);
+}
+
+.--overlay .--modal .--modal-body .--table .--table-body li .--span-1 {
+    display: grid;
+    width: 50px;
+    height: inherit;
+    min-width: 50px;
+    place-items: center;
+}
+
+.--overlay .--modal .--modal-body .--table .--table-body li span {
+    width: 100%;
+    text-align: center;
+}
+
+.--overlay .--modal .--modal-body .--table .--table-body .--sumary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 0;
+    justify-content: space-between;
+}
+
+.--overlay .--modal .--modal-body .--table .--table-body .--sumary span {
+    width: auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+    .--overlay .--modal {
+        width: 40%;
+    }
+}
