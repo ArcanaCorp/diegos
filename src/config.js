@@ -1,7 +1,14 @@
 import { IconBox, IconFileAnalytics, IconHome, IconListDetails, IconSettings, IconShoppingBag, IconUsers, IconPackages, IconAlertOctagon, IconPackageExport, IconSend, IconCashRegister, IconShoppingCart, IconArrowDown, IconArrowUp } from "@tabler/icons-react";
 
-export const REACT_APP_API = 'http://192.168.18.12:4000/api/v1'
-export const SOCKET_URL = 'http://192.168.18.12:4000';
+const MODE = process.env.REACT_APP_MODE || "DEV";
+
+export const REACT_APP_API = MODE === "DEV"
+  ? process.env.REACT_APP_API_URL_DEV
+  : process.env.REACT_APP_API_URL_PROD;
+
+export const SOCKET_URL = MODE === "DEV"
+  ? process.env.REACT_APP_SOCKET_URL_DEV
+  : process.env.REACT_APP_SOCKET_URL_PROD;
 
 const ADMIN_MENU = [
     { link: '/', txt: 'Dashboard', ico: <IconHome/>, mobile: true },
