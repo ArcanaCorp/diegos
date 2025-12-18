@@ -1,79 +1,28 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import { useSalesStore } from "@/store/useSalesStore";
 import { serviceGetSalesAll } from "../services/sales.service";
-import { useSocket } from "./useSocket";
-import { playNotificationSound } from "@/utils/sound";
 
 export const useSales = () => {
 
-    const [state, setState] = useState({
-        list: [],
-        loading: false,
-        error: ""
-    });
+    const { sales, hydrated, loadFromCache, hydrate } = useSalesStore();
 
-    const fetchSales = async (force = false) => {
+    useEffect(() => {
+        if (!hydrated && sales.length === 0) {
+            loadFromCache();
+        }
+    }, [hydrated, loadFromCache, sales.length]);
 
-        // Evita llamadas repetidas
-        if (state.list.length > 0 && !force) return;
+    const fetchSales = async () => {
+        if (sales.length > 0) return;
 
-        try {
-            setState(prev => ({ ...prev, loading: true, error: "" }));
-
-            // Cache local
-            const local = localStorage.getItem("sales");
-            if (local && !force) {
-                setState({
-                    list: JSON.parse(local),
-                    loading: false,
-                    error: ""
-                });
-                return;
-            }
-
-            const response = await serviceGetSalesAll();
-
-            if (!response.ok) {
-                throw new Error(response.message || "Error al obtener ventas");
-            }
-
-            setState({
-                list: response.data,
-                loading: false,
-                error: ""
-            });
-
-            localStorage.setItem("sales", JSON.stringify(response.data));
-
-        } catch (error) {
-            setState({
-                list: [],
-                loading: false,
-                error: error.message
-            });
+        const response = await serviceGetSalesAll();
+        if (response.ok) {
+            hydrate(response.data);
         }
     };
 
-    const addSale = (sale) => {
-        if (!sale) return;
-
-        setState(prev => {
-            const updatedList = [sale, ...prev.list];
-            localStorage.setItem("sales", JSON.stringify(updatedList));
-            return {
-                ...prev,
-                list: updatedList
-            };
-        });
-    };
-
-    useSocket("venta:notificacion", (data) => {
-        addSale(data.venta);
-        playNotificationSound();
-    });
-
     return {
-        ...state,
-        fetchSales,
-        addSale
+        list: sales,
+        fetchSales
     };
 };

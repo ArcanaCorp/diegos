@@ -22,7 +22,8 @@
     "react-thermal-printer": "^0.22.0",
     "socket.io-client": "^4.8.1",
     "sonner": "^2.0.7",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^5.0.9"
   },
   "scripts": {
     "start": "react-app-rewired start",

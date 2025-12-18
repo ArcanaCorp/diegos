@@ -1,5 +1,7 @@
 import { getSocket } from "./connection";
+import { useSalesStore } from "@/store/useSalesStore";
 import { toast } from "sonner";
+import { playNotificationSound } from "@/utils/sound";
 
 export const registerGlobalEvents = () => {
 
@@ -17,7 +19,8 @@ export const registerGlobalEvents = () => {
     // 🔔 ADMIN
     socket.on("venta:notificacion", (data) => {
         toast.success(data.mensaje);
-        console.log("📢 Venta recibida:", data.venta);
+        useSalesStore.getState().addSale(data.venta);
+        playNotificationSound();
     });
 
     socket.on("dashboard:update", (data) => {
