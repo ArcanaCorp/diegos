@@ -1,10 +1,9 @@
+import { useState } from "react";
 import { IconLogout2, IconLayoutSidebarLeftCollapseFilled, IconLayoutSidebarLeftExpandFilled } from "@tabler/icons-react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import { MENUS } from "@/config";
 import './styles/nav.css'
-import { useState } from "react";
-
 
 export default function Nav () {
 
