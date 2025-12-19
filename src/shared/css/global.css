@@ -25,6 +25,7 @@
     --color-primary-light: #6362FF;
     --color-primary-dark: #2F2DBF;
 
+    --color-info: var(--color-primary-light);
     --color-success: #28C76F;
     --color-warning: #FF9F43;
     --color-danger: #EA5455;

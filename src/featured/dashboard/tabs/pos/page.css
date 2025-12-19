@@ -1,73 +1,93 @@
-.--form-sale {
+.--head-pos {
     width: 100%;
     padding: 1rem;
+    margin-bottom: 1rem;
     border-radius: var(--radius-md);
     background-color: var(--color-white);
 }
 
-.--form-sale .--form-sale-group {
+.--table-pos {
     width: 100%;
-    margin-bottom: 1rem;
-}
-
-.--form-sale .--form-sale-group label {
-    display: inline-block;
-    margin-bottom: 1rem;
-    font-size: var(--font-size-sm);
-}
-
-.--form-sale .--form-sale-group .--form-sale-control {
-    width: 100%;
-}
-
-.--form-sale .--form-sale-group .--form-sale-control.flex {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-}
-
-.--form-sale .--form-sale-group .--form-sale-control .--form-sale-flex {
-    width: 100%;
-    display: flex;
-    gap: 1rem;
-}
-
-.--form-sale .--form-sale-group .--form-sale-control .--form-sale-flex select,
-.--form-sale .--form-sale-group .--form-sale-control .--form-sale-flex input {
-    width: 100%;
-    height: 50px;
-    padding: 0 1rem;
+    overflow-y: auto;
     border-radius: var(--radius-md);
-    background-color: var(--color-gray-100);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-secondary);
 }
 
-.--form-sale .--form-sale-group .--form-sale-control .--form-btn-add {
+.--table-pos .--table-head-pos {
+    width: 100%;
+    height: 60px;
     display: flex;
-    gap: .8rem;
-    height: 50px;
-    text-align: center;
     align-items: center;
-    padding: 0rem 1rem;
+    justify-content: space-between;
+    min-width: calc(calc(150px * 6) + 60px);
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.--table-pos .--table-head-pos .--col {
+    display: grid;
+    width: 100%;
+    min-width: 150px;
+    height: inherit;
+    place-items: center;
+    font-size: var(--font-size-xs);
+    border-right: 1px solid var(--color-secondary);
+}
+
+.--table-pos .--table-head-pos .--col-1 {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+}
+
+.--table-pos .--table-body-pos .--rows {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: calc(calc(150px * 6) + 60px);
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.--table-pos .--table-body-pos .--rows .--col {
+    display: flex;
+    width: 100%;
+    min-width: 150px;
+    height: inherit;
+    align-items: center;
     justify-content: center;
+    font-size: var(--font-size-xs);
+    border-right: 1px solid var(--color-secondary);
+}
+
+.--table-pos .--table-body-pos .--rows .--col-1 {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+}
+
+.--table-pos .--table-body-pos .--rows .--col-6 button {
+    position: relative;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    margin-right: .5rem;
+    place-items: center;
+    border-radius: var(--radius-md);
+}
+
+.--table-pos .--table-body-pos .--rows .--col-6 button .--tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    text-wrap: nowrap;
+    padding: .2rem .4rem;
     color: var(--color-white);
-    border-radius: var(--radius-md);
-    background-color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    background-color: rgba(0, 0, 0, .8);
 }
 
-.--form-sale .--form-sale-group .--form-sale-control select {
-    width: 100%;
-    height: 50px;
-    padding: 0 1rem;
-    border-radius: var(--radius-md);
-    background-color: var(--color-gray-100);
-}
-
-.--form-sale .--form-sale-group .--form-sale-control textarea {
-    width: 100%;
-    padding: 1rem;
-    resize: none;
-    min-height: 50px;
-    max-height: 200px;
-    border-radius: var(--radius-md);
-    background-color: var(--color-gray-100);
+.--table-pos .--table-body-pos .--rows .--col-6 button:hover .--tooltip {
+    display: inline-block;
 }

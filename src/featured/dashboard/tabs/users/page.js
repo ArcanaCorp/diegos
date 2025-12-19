@@ -1,10 +1,10 @@
 import { lazy, Suspense } from "react";
-import Modal from "../components/users/Modal";
+import Modal from "../../components/users/Modal";
 import TableSkeleton from "@/components/Skeleton/Table";
-import CreatedUser from "../components/users/CreatedUser";
-import './styles/users.css'
+import CreatedUser from "../../components/users/CreatedUser";
+import './page.css'
 
-const Table = lazy(() => import('../components/users/Table'));
+const Table = lazy(() => import('../../components/users/Table'));
 
 
 export default function UsersPage () {

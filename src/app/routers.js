@@ -1,16 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 import { ProtectedRoute } from "@/routes/ProtectedRoutes";
 import { PublicRoute } from "@/routes/PublicRoute";
+
 import DashboardLayout from "@/featured/dashboard/layout";
 import AuthLayout from "@/featured/auth/layout";
 import LoginPage from "@/featured/auth/page";
-import HomePage from "@/featured/dashboard/tabs/home";
-import UsersPage from "@/featured/dashboard/tabs/users";
+import HomePage from "@/featured/dashboard/tabs/home/page";
+import UsersPage from "@/featured/dashboard/tabs/users/page";
 import VentasPage from "@/featured/dashboard/tabs/ventas/page";
 import ProductosPage from "@/featured/dashboard/tabs/productos/page";
 import POSPage from "@/featured/dashboard/tabs/pos/page";
 import InsumosPage from "@/featured/dashboard/tabs/insumos/page";
-import ReportesPage from "@/featured/dashboard/tabs/reportes/page";
 import ConfigPage from "@/featured/dashboard/tabs/config/page";
 
 export const routers = createBrowserRouter([
@@ -40,10 +40,6 @@ export const routers = createBrowserRouter([
                     {
                         path: '/usuarios',
                         element: <UsersPage/>
-                    },
-                    {
-                        path: '/reportes',
-                        element: <ReportesPage/>
                     },
                     {
                         path: '/config',

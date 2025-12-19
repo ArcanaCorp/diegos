@@ -1,5 +1,5 @@
 import './styles/filtros.css'
-export default function Filtros ({ filter, setFilter, ventas, onClear }) {
+export default function Filtros ({ filter, setFilter, onClear }) {
     return (
         <ul className='--filters'>
             <li className='--filter --filter-type'>

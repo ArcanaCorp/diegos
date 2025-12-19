@@ -2,16 +2,22 @@ import { useState } from "react";
 import { useDB } from "@/context/DBContext";
 import { IconTrash } from "@tabler/icons-react";
 import { toast } from "sonner";
+import { useAuth } from "@/context/AuthContext";
+import Replenish from "./Replenish";
 
 export default function Row({ data }) {
 
+    const { user } = useAuth();
     const { products } = useDB();
     const { updateProduct, deleteProduct } = products;
 
     const [editing, setEditing] = useState(null);
     const [value, setValue] = useState("");
 
+    const isAdmin = user.role === 'ADMIN';
+
     const startEditing = (field, currentValue) => {
+        if (!isAdmin) return;
         setEditing(field);
         setValue(currentValue);
     };
@@ -35,7 +41,7 @@ export default function Row({ data }) {
             className={`--col ${className}`}
             onClick={() => startEditing(field, data[propKey])}
         >
-            {editing === field ? (
+            {editing === field && isAdmin ? (
                 <input
                     autoFocus
                     value={value}
@@ -81,8 +87,16 @@ export default function Row({ data }) {
             {renderCell("price",   "uprice_product", "--col-4")}
             {renderCell("dprice",   "dprice_product", "--col-5")}
             <span className="--col --col-6">
-                <button className="--btn-delete-row" onClick={() => handleQuestionDelete(data.id)}>Eliminar <IconTrash /></button>
+                {user.role === 'ADMIN' && (
+                    <button className="--btn-delete-row" onClick={() => handleQuestionDelete(data.id)}>Eliminar <IconTrash /></button>
+                )}
+                {user.role === 'TIENDA' && ( <>{data.amountByStore}</> )}
             </span>
+            {user.role === 'TIENDA' && (
+                <span className="--col --col-7">
+                    <Replenish data={data} />
+                </span>
+            )}
         </div>
     );
 }

@@ -1,0 +1,58 @@
+.--alert {
+    width: 100%;
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+    cursor: pointer;
+    flex-direction: column;
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.--alert:last-child {
+    border: 0;
+}
+
+.--alert:hover {
+    border-radius: var(--radius-sm);
+    background-color: var(--color-gray-100);
+}
+
+.--alert .--alert-row-A .--alert-status {
+    font-size: var(--font-size-xs);
+}
+
+.--alert-warning .--alert-row-A .--alert-status {
+    color: var(--color-warning);
+}
+
+.--alert .--alert-row-A .--alert-sub {
+    color: var(--color-gray-500);
+    font-size: var(--font-size-xs);
+}
+
+.--alert .--alert-row-B {
+    display: flex;
+    gap: .5rem;
+}
+
+.--alert .--alert-row-B button {
+    width: 100%;
+    padding: .5rem 0;
+    border-radius: var(--radius-sm);
+}
+
+.--alert .--alert-row-B .--alert-btn-info {
+    color: var(--color-white);
+    background-color: var(--color-info);
+}
+
+
+.--alert .--alert-row-B .--alert-btn-acces {
+    color: var(--color-white);
+    background-color: var(--color-success);
+}
+
+.--alert .--alert-row-B .--alert-btn-denied {
+    color: var(--color-white);
+    background-color: var(--color-danger);
+}

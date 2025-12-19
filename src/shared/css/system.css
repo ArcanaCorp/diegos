@@ -40,6 +40,14 @@
     background: var(--color-gray-200);
 }
 
+.__btn_danger {
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+.__btn_danger:hover {
+    background: var(--color-gray-200);
+}
+
 .__btn_outline {
     background: transparent;
     border: 2px solid var(--color-gray-300);
@@ -66,6 +74,9 @@
     font-size: var(--font-size-lg);
 }
 
+.__txt_sm {
+    font-size: var(--font-size-sm);
+}
 
 /*****************************************/
 /* INPUTS                                 */

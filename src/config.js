@@ -1,4 +1,4 @@
-import { IconBox, IconFileAnalytics, IconHome, IconListDetails, IconSettings, IconShoppingBag, IconUsers, IconPackages, IconAlertOctagon, IconPackageExport, IconSend, IconCashRegister, IconShoppingCart, IconArrowDown, IconArrowUp } from "@tabler/icons-react";
+import { IconBox, IconHome, IconListDetails, IconSettings, IconShoppingBag, IconUsers, IconPackages, IconAlertOctagon, IconPackageExport, IconShoppingCart, IconArrowDown, IconArrowUp } from "@tabler/icons-react";
 
 const MODE = process.env.REACT_APP_MODE || "DEV";
 
@@ -18,7 +18,6 @@ const ADMIN_MENU = [
     { link: '/productos', txt: 'Productos', ico: <IconListDetails/>, mobile: true },
     { link: '/insumos', txt: 'Insumos', ico: <IconBox/>, mobile: true },
     { link: '/usuarios', txt: 'Usuarios', ico: <IconUsers/>, mobile: false },
-    { link: '/reportes', txt: 'Reportes', ico: <IconFileAnalytics/>, mobile: false },
     { link: '/config', txt: 'Configuración', ico: <IconSettings/>, mobile: false },
 ];
 
@@ -33,10 +32,8 @@ const ALMACEN_MENU = [
 
 const TIENDA_MENU = [
     { link: '/', txt: 'Dashboard', ico: <IconHome/>, mobile: true },
-    { link: '/pos', txt: 'Ventas', ico: <IconShoppingCart/>, mobile: true },
+    { link: '/pos', txt: 'POS', ico: <IconShoppingCart/>, mobile: true },
     { link: '/productos', txt: 'Productos', ico: <IconPackageExport/>, mobile: true },
-    { link: '/pedidos', txt: 'Pedidos a almacén', ico: <IconSend/>, mobile: true },
-    { link: '/caja', txt: 'Caja del día', ico: <IconCashRegister/>, mobile: true },
     { link: '/config', txt: 'Configuración', ico: <IconSettings/>, mobile: false },
 ];
 

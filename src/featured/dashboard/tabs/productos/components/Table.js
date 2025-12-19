@@ -1,4 +1,5 @@
 import { useDB } from "@/context/DBContext"
+import { useAuth } from "@/context/AuthContext";
 import { useMemo } from "react";
 import Row from "./Row";
 
@@ -6,6 +7,7 @@ import './styles/table.css'
 
 export default function Table ({ search = "", selected = "" }) {
 
+    const { user } = useAuth();
     const { products } = useDB();
     const { list, loading, error } = products;
 
@@ -34,7 +36,15 @@ export default function Table ({ search = "", selected = "" }) {
                 <span className="--col --col-3">Categoria</span>
                 <span className="--col --col-4">Precio</span>
                 <span className="--col --col-5">Precio x Docena</span>
-                <span className="--col --col-6"></span>
+                {user.role === 'TIENDA' && (
+                    <>
+                        <span className="--col --col-6">Cantidad</span>
+                        <span className="--col --col-7">Pedir</span>
+                    </>
+                )}
+                {user.role === 'ADMIN' && (
+                    <span className="--col --col-6">Acciones</span>
+                )}
             </div>
 
             <div className="--products-table-body">

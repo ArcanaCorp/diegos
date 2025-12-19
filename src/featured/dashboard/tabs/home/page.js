@@ -1,7 +1,7 @@
 import Panel from "@/components/Alerts/Panel";
-import ChartsCard from "../components/cards/charts";
-import Kpis from "../components/cards/kpis";
-import './styles/home.css'
+import ChartsCard from "../../components/cards/charts";
+import Kpis from "../../components/cards/kpis";
+import './page.css'
 
 export default function HomePage () {
 

@@ -1,0 +1,22 @@
+{
+    "ruc": "10066098121",
+    "name": "NUÑEZ GRANADOS JUAN GREGORIO",
+    "taxpayerType": "",
+    "status": "ACTIVE",
+    "condition": "HABIDO",
+    "dept": "JUNIN",
+    "prov": "JAUJA",
+    "dist": "JAUJA",
+    "address": "JR. JUNIN NRO. 935",
+    "fullAddress": "JR. JUNIN NRO. 935, JUNIN - JAUJA - JAUJA",
+    "ubigeo": "120401",
+    "ubigeoParts": {
+        "dept": "12",
+        "prov": "1204",
+        "dist": "120401"
+    },
+    "retentionAgent": false,
+    "perceptionAgent": false,
+    "fuelPerceptionAgent": false,
+    "goodTaxpayer": false
+}

@@ -1,4 +1,4 @@
-import { Chart, LineController, LineElement, PointElement, LinearScale, CategoryScale } from "chart.js";
+import { Chart, LineController, LineElement, PointElement, LinearScale, CategoryScale, Tooltip, Legend } from "chart.js";
 import { useEffect, useRef } from "react";
 
 Chart.register(
@@ -6,7 +6,9 @@ Chart.register(
     LineElement,
     PointElement,
     LinearScale,
-    CategoryScale
+    CategoryScale,
+    Tooltip,
+    Legend
 );
 
 export default function VentasChart({ data }) {
@@ -60,7 +62,27 @@ export default function VentasChart({ data }) {
                         color: "rgba(0,0,0,0.05)"
                     }
                 }
-            }
+            },
+            plugins: {
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        title: (items) => {
+                            return items[0].label;
+                        },
+                        label: (item) => {
+                            return `S/ ${item.parsed.y.toFixed(2)}`;
+                        }
+                    }
+                },
+                legend: {
+                    display: false
+                }
+            },
+            interaction: {
+                mode: "index",
+                intersect: false
+            },
         };
 
         chartInstance.current = new Chart(chartRef.current, {
@@ -76,6 +98,14 @@ export default function VentasChart({ data }) {
         };
 
     }, [data]);
+
+    if (!Array.isArray(data) || data.length === 0) {
+        return (
+            <div style={{ padding: 20 }}>
+                No hay datos para mostrar
+            </div>
+        );
+    }
 
     return (
         <div style={{ width: '100%', height: '300px', backgroundColor: '#FFFFFF' }}>

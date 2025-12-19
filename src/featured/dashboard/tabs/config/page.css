@@ -1,0 +1,43 @@
+.--settings {
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-100);
+}
+
+.--settings .--box-setting {
+    margin-bottom: 1rem;
+}
+
+.--settings .--box-setting .--title {
+    margin-bottom: 1rem;
+}
+
+.--settings .--box-setting .--lst {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.--settings .--box-setting .--lst .--itm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.--settings .--box-setting .--lst .--itm .--form-group {
+    display: flex;
+    gap: .5rem;
+}
+
+.--settings .--box-setting .--lst .--itm .--form-group .--btn {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    color: var(--color-white);
+    border-radius: var(--radius-md);
+    background-color: var(--color-primary);
+}

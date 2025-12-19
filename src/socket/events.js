@@ -2,6 +2,7 @@ import { getSocket } from "./connection";
 import { useSalesStore } from "@/store/useSalesStore";
 import { toast } from "sonner";
 import { playNotificationSound } from "@/utils/sound";
+import { useNotificationStore } from "../store/useNotificationStore";
 
 export const registerGlobalEvents = () => {
 
@@ -32,4 +33,11 @@ export const registerGlobalEvents = () => {
     socket.on("stock:update", (data) => {
         console.log("📦 Stock actualizado:", data.productos);
     });
+
+    socket.on("request:notificacion", (data) => {
+        toast.success(data.mensaje);
+        useNotificationStore.getState().addNotify(data.notification)
+        playNotificationSound();
+    })
+
 };
