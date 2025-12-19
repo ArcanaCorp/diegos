@@ -3,7 +3,7 @@ import VentasChart from "../charts/Ventas";
 import { getSalesStats } from "@/services/stats.service";
 import './styles/charts.css'
 
-export default function ChartsCard ({ data }) {
+export default function ChartsCard () {
 
     const [ filter, setFilter ] = useState('hour');
     const [ ventas, setVentas ] = useState([]);

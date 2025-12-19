@@ -37,11 +37,17 @@ export const AuthProvider = ({ children }) => {
 
     const logout = async () => {
         try {
+            // Cookies
             Cookies.remove('diegos_token')
-            sessionStorage.removeItem('diegos_user')
+
+            // Storage
+            sessionStorage.clear()
+            localStorage.clear()
+
+            // Estado global
             setUser(null)
         } catch (error) {
-            console.error(error);
+            console.error(error)
         }
     }
 

@@ -2,6 +2,8 @@ import { IconTrendingDown, IconTrendingUp } from "@tabler/icons-react";
 import './styles/kpis.css'
 export default function Kpis ({ kpis }) {
 
+    console.log(kpis);
+
     return (
 
         <div className="--card-kpis">

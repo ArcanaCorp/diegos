@@ -18,7 +18,7 @@
 
 .--modal-alert-info li .--row-span-1 {
     display: grid;
-    width: 20%;
+    width: 40%;
     height: inherit;
     padding: .2rem .5rem;
     place-items: center;
@@ -34,4 +34,11 @@
     padding: 0 .5rem;
     align-items: center;
     font-size: var(--font-size-sm);
+}
+
+
+@media (min-width: 1024px) {
+    .--modal-alert-info li .--row-span-1 {
+        width: 20%;
+    }
 }

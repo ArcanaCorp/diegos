@@ -58,6 +58,10 @@ export default function Modal ({ view, info, toogleModal }) {
                             </li>
                         </ul>
                     )}
+                    <div>
+                        <button>Aceptar</button>
+                        <button>Rechazar</button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -4,6 +4,8 @@ import { Toaster } from "sonner";
 import { MENUS } from "@/config";
 import { useAuth } from "@/context/AuthContext";
 import { playNotificationSound } from "@/utils/sound";
+import { enablePush } from "@/services/settings.service";
+import { requestNotificationPermission } from "@/helpers/requestNotificationPermission";
 
 import { setupSockets } from "@/socket";
 
@@ -36,6 +38,17 @@ export default function DashboardLayout () {
         };
     }, []);
 
+    useEffect(() => {
+        const permissions = async () => {
+            try {
+                await requestNotificationPermission();
+                await enablePush();
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        permissions();
+    }, [])
 
     useEffect(() => {
         if (!user) return; // seguridad extra
